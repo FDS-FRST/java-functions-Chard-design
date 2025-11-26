@@ -57,7 +57,17 @@ public class Main {
      * @return
      */
     public static String grade(int score) {
-        return score + (score >= 90 ? "A" : "B");
+       if (score >= 90) {
+           return "A";
+       } else if (score >= 80) {
+           return "B";
+       }else if (score >= 70) {
+           return "C";
+       }else if (score >= 60) {
+           return "D";
+       }else {
+           return "F";
+       }
     }
 
     /**
@@ -69,7 +79,7 @@ public class Main {
      * @return
      */
     public static int maxOfThree(int a, int b, int c) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+       return Math.max(a,Math.max(b,c));
     }
 
     /**
@@ -79,7 +89,7 @@ public class Main {
      * @return
      */
     public static double toFahrenheit(double celsius) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        return celsius * 1.8 + 32;
     }
 
     /**
@@ -90,7 +100,7 @@ public class Main {
      * @return
      */
     public static double applyDiscount(double price, double discount) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        return price - discount;
     }
 
 
@@ -101,7 +111,7 @@ public class Main {
      * @return
      */
     public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        retur
     }
 
     /**
