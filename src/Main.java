@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -111,7 +112,13 @@ public class Main {
      * @return
      */
     public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
-        return List.of();
+       List<Integer> evenNumbers = new ArrayList<>();
+       for (Integer number : numbers) {
+           if (isEven(number)) {
+               evenNumbers.add(number);
+           }
+
+       }return evenNumbers;
     }
 
     /**
@@ -121,7 +128,10 @@ public class Main {
      * @return
      */
     public static int factorial(int n) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }return result;
     }
 
     /**
@@ -131,7 +141,15 @@ public class Main {
      * @return
      */
     public static int fibonacci(int n) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        if (n <= 1) {
+            return n;
+        }
+        int a = 0, b = 1, c = 0;
+        for (int i = 2; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        } return b;
     }
 
 
