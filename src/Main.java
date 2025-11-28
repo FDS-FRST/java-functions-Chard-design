@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -111,8 +112,16 @@ public class Main {
      * @return
      */
     public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
-        retur
-    }
+        List<Integer> evens = new ArrayList<>();
+        for (Integer n : numbers) {
+            if (n % 2 == 0) {
+                evens.add(n);
+            }
+        }
+        return evens;
+ }
+
+
 
     /**
      * Calculates factorial of a number.
@@ -121,7 +130,13 @@ public class Main {
      * @return
      */
     public static int factorial(int n) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+
+
     }
 
     /**
@@ -131,8 +146,18 @@ public class Main {
      * @return
      */
     public static int fibonacci(int n) {
-        throw new UnsupportedOperationException("Not yet implemented!");
-    }
+        if (n <= 1) {
+            return n;
+        }
+        int a = 0, b = 1, c = 0;
+        for (int i = 2; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+
+  }
 
 
     // ================= TEST RUNNER =================
